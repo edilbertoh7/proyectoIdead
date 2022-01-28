@@ -24,6 +24,12 @@ Route::delete('cat/{id}','CatController@delete')->name('cat');
 
 Route::get('vermuni/{id}','MunicipioController@show')->name('vermuni');
 
+Route::get('cats','CatsControllers@index')->name('cats');
+Route::get('cats/{id}','CatsControllers@show')->name('cats');
+Route::post('cats','CatsControllers@store')->name('cats');
+Route::put('cats/{id}','CatsControllers@update')->name('cats');
+Route::delete('cats/{id}','CatsControllers@delete')->name('cats');
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
