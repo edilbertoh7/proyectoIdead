@@ -76,13 +76,36 @@ class CatsControllers extends Controller
    			[
    				"data"=>$cl,
    				"status"=>200,
-   				"mensaje"=>"Guardado Correctamente"
+   				"mensaje"=>"CAT Guardado Correctamente"
    			]);
    	}
    }
    public function update(Request $request, Cat $id)
    {
-   	# code...
+   	
+      $id->nombre=$request['nombre'];
+      $id->direccion=$request['direccion'];
+      $id->email=$request['email'];
+      $id->departamento_id=$request['departamento_id'];
+      $id->municipio_id=$request['municipio_id'];
+      $id->activo=$request['activo'];
+      $id->save();
+
+      return response()->json(
+         [
+            "data"=>$id,
+            "status"=>200,
+            "mensaje"=>"El CAT fue actualizado con exito"
+         ]);
+   }
+
+   public function delete(Cat $id)
+   {
+      $id->delete();
+
+        return response()->json(
+         ["mensaje"=>"Se elimino el CAT Correctamente"
+         ]);
    }
 
 
