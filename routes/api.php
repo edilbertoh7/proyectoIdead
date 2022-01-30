@@ -40,6 +40,20 @@ Route::post('programas','ProgramasController@store')->name('programas');
 Route::put('programas/{id}','ProgramasController@update')->name('programas');
 Route::delete('programas/{id}','ProgramasController@delete')->name('programas');
 
+// cursos
+Route::get('cursos','CursosController@index')->name('cursos');
+Route::get('cursos/{id}','CursosController@show')->name('cursos');
+Route::post('cursos','CursosController@store')->name('cursos');
+Route::put('cursos/{id}','CursosController@update')->name('cursos');
+Route::delete('cursos/{id}','CursosController@delete')->name('cursos');
+
+// usuarios
+Route::get('usuarios','UserController@index')->name('usuarios');
+Route::get('usuarios/{id}','UserController@show')->name('usuarios');
+Route::post('usuarios','UserController@store')->name('usuarios');
+Route::put('usuarios/{id}','UserController@update')->name('usuarios');
+Route::delete('usuarios/{id}','UserController@delete')->name('usuarios');
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
