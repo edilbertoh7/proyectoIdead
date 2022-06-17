@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class CursosController extends Controller
 {
+
 	public function index()
 	{
 		try { 
@@ -40,7 +41,8 @@ class CursosController extends Controller
 			return response()->json(
 				[
 					'cursos'=>$cursos,
-					'programas'=>$programas
+					'programas'=>$programas,
+					'status'=>200
 				]);
 		} catch(\Illuminate\Database\QueryException $ex){ 
 			dd($ex->getMessage()); 

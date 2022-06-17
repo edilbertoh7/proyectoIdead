@@ -34,7 +34,7 @@ class CreateUserDetailsTable extends Migration
 
             //Llaves foraneas
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('tipo_documento_id')->references('id')->on('tipos_documento');
+            $table->foreign('tipo_documento_id')->references('id')->on('tipo_documentos');
         });
     }
 

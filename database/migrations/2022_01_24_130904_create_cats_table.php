@@ -14,28 +14,19 @@ class CreateCatsTable extends Migration
     public function up()
     {
         Schema::create('cats', function (Blueprint $table) {
-            $table->increments('id')
-                ->comment('Código del CAT');
+            $table->increments('id')->comment('Código del CAT');
 
-            $table->string('nombre',50)
-                ->comment('Nombre del CAT');
+            $table->string('nombre',50)->comment('Nombre del CAT');
 
-            $table->text('direccion')
-                ->comment('Direccion del CAT');
+            $table->text('direccion')->comment('Direccion del CAT');
 
-            $table->string('email',50)
-                ->dafault('')
-                ->comment('Email contacto del CAT');
+            $table->string('email',50)->dafault('')->comment('Email contacto del CAT');
 
-            $table->unsignedInteger('departamento_id')
-                ->comment('Código del departamento al que pertenece');
+            $table->unsignedInteger('departamento_id')->comment('Código del departamento al que pertenece');
 
-            $table->unsignedInteger('municipio_id')
-                ->comment('Código del municipio al que pertenece');   
+            $table->unsignedInteger('municipio_id')->comment('Código del municipio al que pertenece');   
 
-            $table->boolean('activo')
-                ->default(1)
-                ->comment('Activo'); 
+            $table->boolean('activo')->default(1)->comment('Activo'); 
 
             $table->timestamps();
 

@@ -54,6 +54,13 @@ Route::post('usuarios','UserController@store')->name('usuarios');
 Route::put('usuarios/{id}','UserController@update')->name('usuarios');
 Route::delete('usuarios/{id}','UserController@delete')->name('usuarios');
 
+//roles y permisos
+Route::get('roles','RolesController@index')->name('roles');
+Route::get('roles/{id}','RolesController@show')->name('roles');
+Route::post('roles','RolesController@store')->name('roles');
+Route::put('roles/{id}','RolesController@update')->name('roles');
+Route::delete('roles/{id}','RolesController@delete')->name('roles');
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });

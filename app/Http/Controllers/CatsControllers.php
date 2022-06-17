@@ -35,7 +35,7 @@ class CatsControllers extends Controller
    public function show(Cat $id)
    {
       try { 
-
+        
          	$cats = DB::table('cats')
           ->join('departamentos','departamentos.id', '=', 'cats.departamento_id')
           ->join("municipios","municipios.id", "=", "cats.municipio_id")
@@ -48,7 +48,7 @@ class CatsControllers extends Controller
           ->get();
           return response()->json([
             'data'=>$cats,
-            'status'=>4,
+            'status'=>201,
             'departamento'=>$resdepa
          ]);
       } catch(\Illuminate\Database\QueryException $ex){ 

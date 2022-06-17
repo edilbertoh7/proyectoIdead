@@ -12,10 +12,16 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
     	//Departamentos
-    	$this->call(DepartamentosTableSeeder::class);
+        $this->call(DepartamentosTableSeeder::class);
         //Municipios
         $this->call(MunicipiosTableSeeder::class);
-         //CAT de la universidad
+        //Tipos de documento
+        $this->call(TiposDocumentoTableSeeder::class);
+        //CAT de la universidad
         $this->call(CatTableSeeder::class);
+        //Permisos de users y roles
+        $this->call(PermissionsTableSeeder::class);
+        //Usuario del sistema (admin)
+        $this->call(UsersTableSeeder::class);
     }
 }
