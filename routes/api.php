@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\AnaliticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,6 @@ Route::delete('roles/{id}','RolesController@delete')->name('roles');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
+
+Route::get('analitic','AnaliticController@index')->name('analitic');
+Route::get('analitic/{id}','AnaliticController@show')->name('analitic');

@@ -58,8 +58,8 @@ class UserController extends Controller
 
      public function store(Request $request)
      {//dd($request);
-        print_r("hola".$request);
-        exit;
+//        print_r("hola".$request);
+//        exit;
      	$error= array();
      	$mensaje='';
 		     try {
